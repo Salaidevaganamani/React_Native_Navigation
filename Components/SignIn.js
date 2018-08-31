@@ -24,7 +24,7 @@ class SignInScreen extends React.Component {
         <View style={styles.container}>
           <RkTextInput 
             rkType='rounded' 
-            placeholder='Login'
+            placeholder='Email'
             onChangeText = {this.handleName}
             />
           <RkButton onPress={() => this._signInAsync(this.state.name)}>Sign In!</RkButton>
@@ -34,7 +34,7 @@ class SignInScreen extends React.Component {
     }
   
     _signInAsync = async (name) => {
-        if(name == 'salai'){
+        if(name == 'salai@abc.com'){
             await AsyncStorage.setItem('userToken', 'abcd');
             this.props.navigation.navigate('App');
         }else{

@@ -6,12 +6,16 @@ import ModalScreen from './Components/Modal.js';
 import createBottomTabNavigator from './Components/TabNav.js';
 import AuthLoadingScreen from './Components/AuthLoading.js';
 import SignInScreen from './Components/SignIn.js';
+import ProductList from './Components/ProductList.js';
+import ProductDetailsScreen from './Components/ProductDetails.js';
 
 const MainStack = createStackNavigator(
   {
     Home: HomeScreen,
     Details: DetailsScreen,
     Tabs: createBottomTabNavigator,
+    Products: ProductList,
+    ProductDetails: ProductDetailsScreen,
   },
   {
     initialRouteName: 'Home',

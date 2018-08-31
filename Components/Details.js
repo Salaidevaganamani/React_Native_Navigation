@@ -19,9 +19,7 @@ class DetailsScreen extends React.Component {
           <Text>Details Screen</Text>
           <Text>itemId: {JSON.stringify(itemId)}</Text>
           <Text>otherParam: {JSON.stringify(otherParam)}</Text>
-          <RkButton onPress = {() => this.props.navigation.push('Details',{
-            itemId: Math.floor(Math.random() * 100),
-          })}>Details...again</RkButton>
+          <RkButton onPress = {() => this.props.navigation.navigate('Products')}>Products</RkButton>
           <RkButton onPress = {() => this.props.navigation.popToTop()}>Home</RkButton>
           <RkButton onPress = {() => this.props.navigation.goBack()}>Go Back</RkButton>
           <RkButton onPress = {() => this.props.navigation.setParams({otherParam: 'Updated!'})}>Update Details</RkButton>
